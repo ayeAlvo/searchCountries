@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 
-const Country = ({countries}) => {
+const SearchCountry = ({countries}) => {
 
   const [countrySearch, setCountrySearch] = useState([]);
   const [countryInput, setCountryInput] = useState([]);
-  console.log(countries);
-  // countries.map(country => console.log(country.languages[0].name));
+  // console.log(countries);
 
   const handleChange = e => {
     setCountryInput(e.target.value);
@@ -21,15 +20,12 @@ const Country = ({countries}) => {
       }
     });
     setCountrySearch(result);
-    console.log(countrySearch);
   }
-
   
   const handleSubmit = e => {
     e.preventDefault();
   }  
   
-
   return (
     <>
     <form action="" onSubmit={handleSubmit} className="form-inline justify-content-center m-3 d-flex">
@@ -49,4 +45,4 @@ const Country = ({countries}) => {
   )
 }
 
-export default Country;
+export default SearchCountry;
