@@ -2,9 +2,10 @@ import React from "react";
 import "./App.css";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
+import Search from "./Search";
 
 const client = new ApolloClient({
-  uri: "https://48p1r2roz4.sse.codesandbox.io",
+  uri: "https://countries.trevorblades.com/",
 });
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
         </span>
       </h2>
     </div>
+    <Search />
   </ApolloProvider>
 );
 export default App;
