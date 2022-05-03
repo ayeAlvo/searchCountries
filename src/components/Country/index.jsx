@@ -1,8 +1,9 @@
 import React from "react";
-import Continent from "./Continent";
-import Language from "./Language";
+import Continent from "../Continent/index";
+import Language from "../Language/index";
 
 const Country = (props) => {
+
   if(props.continent){
     return <Continent country={props.country}/>       
   }

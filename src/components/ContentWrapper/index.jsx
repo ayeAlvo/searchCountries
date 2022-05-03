@@ -1,7 +1,6 @@
 import React from 'react';
-import {useCountries} from '../countries/custom-hooks';
-import SearchCountry from './SearchCountry';
-
+import {useCountries} from '../../countries/custom-hooks';
+import SearchCountry from '../SearchCountry/index';
 
 const ContentWrapper = () => {
   const {data, loading} = useCountries();    

@@ -3,15 +3,6 @@ import React from "react";
 const Language = (props) => {
   return (
     <>
-    {/* {props.country.map(country => <div key={country.code}>
-      <hr />
-        {country.languages.map(len => <p key={len.name}>{len.name}</p>)}
-        {country.name} <br />
-        {country.emoji} <br />
-        {country.continent.name}
-      <hr />  
-    </div> )} */}
-
     <div> 
   {props.country.map(country => <div key={country.code}>    
     <div className="card mb-3" style={{width: "18rem"}}>
