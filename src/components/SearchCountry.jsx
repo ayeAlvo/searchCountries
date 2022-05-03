@@ -9,17 +9,14 @@ const SearchCountry = ({countries}) => {
   const [language, setLanguage] = useState(null);
   // console.log(countries);
 
-
   const handleChange = e => {
     setCountryInput(e.target.value);
-    console.log(countryInput);
     filterCountry(e.target.value);
   }
 
   const filterCountry = searchInput => {
     let result = countries.filter(country => {
       if(country.name.toString().toLowerCase().includes(searchInput.toLowerCase())){
-        console.log(country);
         return country;
       }
     });
@@ -46,9 +43,8 @@ const SearchCountry = ({countries}) => {
       <div className="border">
         <i className="fa-solid fa-magnifying-glass" >
         <input type="text" placeholder="Search" className="input border-0" value={countryInput} onChange={handleChange} /></i>
-      </div>
-  
-      </form>
+      </div>  
+    </form>
 
       <div className="d-flex justify-content-center">
         <h3 className="mx-5">Group By: </h3>
