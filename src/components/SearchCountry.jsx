@@ -43,13 +43,18 @@ const SearchCountry = ({countries}) => {
   return (
     <>
     <form action="" onSubmit={handleSubmit} className="form-inline justify-content-center m-3 d-flex">
-        <input type="text" placeholder="Search" className="input" value={countryInput} onChange={handleChange} />
-        {/* <button type="submit" className="btn btn-outline-light mx-2 btn-search">Filter</button> */}        
+      <div className="border">
+        <i className="fa-solid fa-magnifying-glass" >
+        <input type="text" placeholder="Search" className="input border-0" value={countryInput} onChange={handleChange} /></i>
+      </div>
+  
       </form>
 
-      <h3>Group By: </h3>
-      <button type="button" onClick={renderContinent}>Continent</button>
-      <button type="button" onClick={renderLanguage}>Language</button>
+      <div className="d-flex justify-content-center">
+        <h3 className="mx-5">Group By: </h3>
+        <button className="mx-5 px-5" type="button" onClick={renderContinent}>Continent</button>
+        <button className="mx-5 px-5" type="button" onClick={renderLanguage}>Language</button>
+      </div>
 
       <Country country={countrySearch} continent={continent} language={language}/>
    
