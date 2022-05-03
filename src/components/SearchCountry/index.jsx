@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Country from "./Country";
+import React, { useEffect, useState } from "react";
+import Country from "../Country/index";
 
 const SearchCountry = ({countries}) => {
 
@@ -9,6 +9,12 @@ const SearchCountry = ({countries}) => {
   const [language, setLanguage] = useState(null);
   // console.log(countries);
 
+  useEffect(() => {
+    if (continent === null) {
+      setContinent(true);
+    }
+  }, []);
+  
   const handleChange = e => {
     setCountryInput(e.target.value);
     filterCountry(e.target.value);
