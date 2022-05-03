@@ -6,12 +6,14 @@ query {
     name
     code
     native
+    capital
     continent{
       name
     }
     languages{
       code
       name
+      native
     }
     emoji
     emojiU
