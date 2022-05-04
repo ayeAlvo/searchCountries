@@ -50,7 +50,7 @@ const SearchCountry = ({countries}) => {
     <form action="" onSubmit={handleSubmit} className="form-inline justify-content-center m-3">
       <div className="form-group has-search">
         <span className="fa fa-search form-control-feedback"></span>
-        <input type="text" className="form-control" placeholder="Search" value={countryInput} onChange={handleChange}/>
+        <input type="text" className="form-control" placeholder="Search" value={countryInput} onChange={handleChange} autoFocus/>
       </div>
     </form>
     
