@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Country from "../Country/index";
+import "./styles.css";
 
 const SearchCountry = ({countries}) => {
 
@@ -45,21 +46,21 @@ const SearchCountry = ({countries}) => {
   
   return (
     <>
-    <form action="" onSubmit={handleSubmit} className="form-inline justify-content-center m-3 d-flex">
-      <div className="border">
-        <i className="fa-solid fa-magnifying-glass" >
-        <input type="text" placeholder="Search" className="input border-0" value={countryInput} onChange={handleChange} /></i>
-      </div>  
-    </form>
-
-      <div className="d-flex justify-content-center">
-        <h3 className="mx-5">Group By: </h3>
-        <button className="mx-5 px-5" type="button" onClick={renderContinent}>Continent</button>
-        <button className="mx-5 px-5" type="button" onClick={renderLanguage}>Language</button>
+    <div className="">
+    <form action="" onSubmit={handleSubmit} className="form-inline justify-content-center m-3">
+      <div className="form-group has-search">
+        <span className="fa fa-search form-control-feedback"></span>
+        <input type="text" className="form-control" placeholder="Search" value={countryInput} onChange={handleChange}/>
       </div>
-
+    </form>
+    
+      <div className="d-md-flex justify-content-between container m-4">
+        <h3 className="mx-5 mt-3 mb-3 2">Group By: </h3>
+        <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderContinent}>Continent</button>
+        <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderLanguage}>Language</button>
+      </div>
       <Country country={countrySearch} continent={continent} language={language}/>
-   
+    </div>
     </>
   )
 }
