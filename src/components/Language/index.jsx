@@ -3,7 +3,7 @@ import React from "react";
 const Language = (props) => {
   return (
     <>
-    <div> 
+    <div className="mb-5"> 
   {props.country.map(country => <div key={country.code}>    
     <div className="card mb-3" style={{width: "18rem"}}>
     <div className="card-header">    
