@@ -23,7 +23,8 @@ const SearchCountry = ({countries}) => {
 
   const filterCountry = searchInput => {
     let result = countries.filter(country => {
-      if(country.name.toString().toLowerCase().includes(searchInput.toLowerCase())){
+      if(country.name.toString().toLowerCase().startsWith(searchInput.toLowerCase()) 
+        && country.name.toString().toLowerCase().includes(searchInput.toLowerCase())){
         return country;
       }
     });
