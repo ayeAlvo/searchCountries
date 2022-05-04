@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Country from "../Country/index";
+import CardCountry from "../CardCountry/index";
 import "./styles.css";
 
 const SearchCountry = ({countries}) => {
@@ -60,7 +60,9 @@ const SearchCountry = ({countries}) => {
         <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderContinent}>Continent</button>
         <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderLanguage}>Language</button>
       </div>
-      <Country country={countrySearch} continent={continent} language={language}/>
+      <div>
+        <CardCountry country={countrySearch} continent={continent} language={language}/>
+      </div>
     </div>
     </>
   )
