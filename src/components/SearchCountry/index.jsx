@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Country from "../Country/index";
+import Footer from "../Footer/index";
 import "./styles.css";
 
 const SearchCountry = ({countries}) => {
@@ -61,6 +62,7 @@ const SearchCountry = ({countries}) => {
       </div>
       <Country country={countrySearch} continent={continent} language={language}/>
     </div>
+    <Footer />
     </>
   )
 }
