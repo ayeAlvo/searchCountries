@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
   <>
-  <footer className="bg-footer fixed-bottom">    
-  <div className="w-100 bg-dark py-3">
+  <footer className="bg-footer">    
+  <div className="w-100 bg-dark py-1">
     <div className="container">
         <div className="row pt-2">
             <div className="col-lg-6 col-12">

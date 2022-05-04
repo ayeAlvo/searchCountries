@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Country from "../Country/index";
-import Footer from "../Footer/index";
 import "./styles.css";
 
 const SearchCountry = ({countries}) => {
@@ -56,13 +55,12 @@ const SearchCountry = ({countries}) => {
     </form>
     
       <div className="d-md-flex justify-content-between container m-4">
-        <h3 className="mx-5 mt-3 mb-3">Group By: </h3>
+        <h3 className="mx-5 mt-3 mb-3 2">Group By: </h3>
         <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderContinent}>Continent</button>
         <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderLanguage}>Language</button>
       </div>
       <Country country={countrySearch} continent={continent} language={language}/>
     </div>
-    <Footer />
     </>
   )
 }

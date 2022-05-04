@@ -13,6 +13,7 @@ const Continent = (props) => {
         <h5 className="card-title">{country.emoji} {country.name}</h5>
         <h6 className="card-subtitle mb-2 text-muted">{country.native}</h6>
         <span className="card-text">Language: {country.languages.map(len => <p key={len.name}>{len.name}</p>)}</span>
+        <p className="card-text">Capital: {country.capital}</p>
       </div> 
     </div>
   </div> )}
