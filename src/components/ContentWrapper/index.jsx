@@ -7,8 +7,8 @@ const ContentWrapper = () => {
   // console.log(data);
 
   return (
-    <div className="App">
-      <h2>Country Search</h2>
+    <div className="">
+      <h2 className="text-center ">Country Search</h2>
       {loading ? <p>Loading...</p>
       : <SearchCountry countries={data?.countries} />            
       }
