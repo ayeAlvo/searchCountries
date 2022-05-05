@@ -2,21 +2,20 @@ import React from 'react';
 import {useCountries} from '../../countries/custom-hooks';
 import SearchCountry from '../SearchCountry/index';
 import Footer from '../Footer/index';
+import './styles.css';
 
 const ContentWrapper = () => {
   const {data, loading} = useCountries();    
-  // console.log(data);
-
   return (
-    <div className="container shadow bg-light">
-      <h2 className="text-start m-5 fs-1">Country Search</h2>
+    <div className="container shadow bg_color">
+      <h2 className="text-start mt-md-5 mt-2 fs-1 text-primary animate__animated animate__headShake">Country Search</h2>
+      <h4 className="text-start mb-md-5 mb-4 mt-md-3 mt-2 text-primary">for letters and words</h4>
       {loading ? <p>Loading...</p>
       : <SearchCountry countries={data?.countries} />            
       }
       <Footer />
     </div>
   )
-
 }
 
 export default ContentWrapper;

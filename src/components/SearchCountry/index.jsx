@@ -57,10 +57,10 @@ const SearchCountry = ({countries}) => {
     
       <div className="d-md-flex justify-content-between container m-4">
         <h3 className="mx-5 mt-3 mb-3 2">Group By: </h3>
-        <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderContinent}>Continent</button>
-        <button className="mx-5 mt-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderLanguage}>Language</button>
+        <button className="mx-5 mt-md-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderContinent}>Continent</button>
+        <button className="mx-5 mt-md-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderLanguage}>Language</button>
       </div>
-      <div>
+      <div className="container">
         <CardCountry country={countrySearch} continent={continent} language={language}/>
       </div>
     </div>
