@@ -54,15 +54,16 @@ const SearchCountry = ({countries}) => {
         <input type="text" className="form-control" placeholder="Search" value={countryInput} onChange={handleChange} autoFocus/>
       </div>
     </form>
-    
+
+    {countryInput.length > 0 && countrySearch.length === 0 ? <h4 className="text-primary">search without result, please try with a different text <i className="fa-solid fa-magnifying-glass-plus text-primary p-2"></i></h4>: ""}
       <div className="d-md-flex justify-content-between container m-4">
         <h3 className="mx-5 mt-3 mb-3 2">Group By: </h3>
-        <button className="mx-5 mt-md-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderContinent}>Continent</button>
-        <button className="mx-5 mt-md-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderLanguage}>Language</button>
+        <button className="mx-5 mt-md-3 mb-3 px-5 btn btn-outline-primary border-3 fa-solid fa-earth-americas" type="button" onClick={renderContinent}><span className="me-3 fs-5"> Continent</span></button>
+        <button className="mx-5 mt-md-3 mb-3 px-5 btn btn-outline-primary border-3 fa-solid fa-language" type="button" onClick={renderLanguage}><span className="me-3 fs-5"> Language</span></button>
       </div>
       <div className="container">
-        {countryInput.length > 0 && countrySearch.length === 0 ? <h4 className="text-primary">search without result, please try with a different text <i className="fa-solid fa-magnifying-glass-location text-primary p-2"></i></h4>
-        : <CardCountry country={countrySearch} continent={continent} language={language}/>
+        {countrySearch.length > 0 ? <CardCountry country={countrySearch} continent={continent} language={language}/>
+        : <h4 className="text-primary fs-3">try some text <i className="fa-solid fa-magnifying-glass-location text-primary p-2"></i></h4>
         }
       </div>
     </div>

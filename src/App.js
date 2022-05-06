@@ -10,7 +10,7 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div>
+    <div className="bg-body bg-opacity">
     <ContentWrapper />
     </div>
   </ApolloProvider>
