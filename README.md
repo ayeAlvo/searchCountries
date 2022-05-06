@@ -23,18 +23,13 @@ Además de esto, se espera que hagas deploy de tu app en el servicio que desees 
 - Puedes dejar comentarios de decisiones que tuviste que tomar y del por qué en este repositorio.
 - Se va a considerar un buen diseño de UX/UI.
 
-## Hints
+## Ideas para mejorar la respuesta de servicio de la BDD
 
-Acá van algunas cosas que pueden ser útiles (o no 👀):
+- Primero: averiguaría en qué en motor de busqueda esta la base de datos, ya que depende cuál tienen diferentes características que los hacen mas eficientes a la hora de realizar las Querys. Y si es posible usar un motor de busqueda que se aplique mejor a las consultas, por ej. si hay muchas que predemoninan los SELECT propondría usar MyISAM, y si predominan los INSERT, UPDATE o DELETE, propondría InnoDB.
+- Segundo: sería ver si las tablas tienen indices, y sino crearlos, para poder hacer las Querys por indices que son más rapidas.
+- Tercero: vería las Querys que se estan usando y tratar de optimizarlas, de ser necesario las revisaria ejecutando la sentencia EXPLAIN, para saber el plan de ejecución de las consultas utilizadas, eso nos daria una buena idea de cómo optimizarlas, y nos indicaría que consulta es más o menos óptima, si se recorren todos los registros de la tabla o no.
+- Cuarto: y no menos importante, limitaría los resultados, por ejemplo si solo estamos filtrando por id y queremos un solo resultado pondria un LIMIT 1 al final de la sentencia.
+- Quinto: miraría si las consultas se estan haciendo por medio de un ORM, sino implementarlo, tambien por un tema de seguridad.
+- Sexto: si se puede propondria el almacenamiento en cache de las consultas mas comunes, de esta manera cuando se vuelva a repetir la Query el resultado puede mostrarse sin necesidad de realizar la busqueda en la base de datos.
+- Septimo: entiendo que viendo todo esto se podría disminuir solo un poco el tiempo de respuesta, habría que analizar las otras áreas si es que existen, por ejemplo hablar con los DevOps. Solo Back no va a poder.
 
-- [Gitignore](https://www.toptal.com/developers/gitignore)
-- [GraphQL](https://www.howtographql.com/)
-- [React](https://es.reactjs.org/)
-- [Styled components](https://styled-components.com/docs/basics)
-- [ApolloClient](https://www.apollographql.com/docs/react/)
-- [Lodash](https://lodash.com/)
-- [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-- [Commitlint](https://commitlint.js.org/#/)
-- [Eslint](https://eslint.org/)
-- [Eslint airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-- [Husky](https://www.npmjs.com/package/husky)
