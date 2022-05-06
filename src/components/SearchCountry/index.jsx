@@ -61,7 +61,9 @@ const SearchCountry = ({countries}) => {
         <button className="mx-5 mt-md-3 mb-3 px-5 btn btn-outline-primary" type="button" onClick={renderLanguage}>Language</button>
       </div>
       <div className="container">
-        <CardCountry country={countrySearch} continent={continent} language={language}/>
+        {countryInput.length > 0 && countrySearch.length === 0 ? <h4 className="text-primary">search without result, please try with a different text <i className="fa-solid fa-magnifying-glass-location text-primary p-2"></i></h4>
+        : <CardCountry country={countrySearch} continent={continent} language={language}/>
+        }
       </div>
     </div>
     </>
